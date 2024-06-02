@@ -27,7 +27,7 @@
 
       async function deleteDestination(destinationID) {
         const response = await axios.delete(
-          `http://localhost:3000/destinations/${destinationID}`
+          `https://json-server-222.onrender.com/destinations${destinationID}`
         );
         alert("delete succesfuly");
       }
@@ -40,7 +40,7 @@
         };
 
         const response = await axios.post(
-          "http://localhost:3000/destinations",
+          "https://json-server-222.onrender.com/destinations",
           newDestination
         );
         console.log("added successfuly");
@@ -49,7 +49,7 @@
 
       getDestinations();
       async function getDestinations() {
-        const response = await axios.get("http://localhost:3000/destinations");
+        const response = await axios.get("https://json-server-222.onrender.com/destinations");
         myDestinations = response.data;
         displayDestinations();
       }
